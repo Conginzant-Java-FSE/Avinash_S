@@ -1,0 +1,9 @@
+function getPropertyValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+const movie = {
+  title: "Galactic Wars",
+  rating: 9.1,
+  premium: true
+};
+console.log(getPropertyValue(movie, "rating"));
